@@ -5,7 +5,7 @@ import { LegalDocument, type LegalSection } from "@/components/marketing/legal-d
 import { CONTACT_EMAIL, LEGAL_GOVERNING_LAW } from "@/data/legal";
 
 export const Route = createFileRoute("/terms")({
-  head: () => pageMeta("Terms of Service — WIN DEALS", "Review the terms governing use of WIN DEALS.", true),
+  head: () => pageMeta("Terms of Service — WIN DEALS", "Review the terms governing use of WIN DEALS.", true, "/terms"),
   component: Terms,
 });
 

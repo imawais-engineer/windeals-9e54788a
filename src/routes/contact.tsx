@@ -17,7 +17,7 @@ import { contactSchema, contactTopics, submitContact, type ContactInput } from "
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/contact")({
-  head: () => pageMeta("Contact WIN DEALS", "Get in touch with WIN DEALS about the product, early access, partnerships, or feedback.", true),
+  head: () => pageMeta("Contact WIN DEALS", "Get in touch with WIN DEALS about the product, early access, partnerships, or feedback.", true, "/contact"),
   component: Contact,
 });
 

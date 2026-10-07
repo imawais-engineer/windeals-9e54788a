@@ -5,7 +5,7 @@ import { LegalDocument, type LegalSection } from "@/components/marketing/legal-d
 import { CONTACT_EMAIL } from "@/data/legal";
 
 export const Route = createFileRoute("/privacy")({
-  head: () => pageMeta("Privacy Policy — WIN DEALS", "Learn how WIN DEALS handles information when you use our website and services.", true),
+  head: () => pageMeta("Privacy Policy — WIN DEALS", "Learn how WIN DEALS handles information when you use our website and services.", true, "/privacy"),
   component: Privacy,
 });
 

@@ -8,7 +8,7 @@ import { Reveal } from "@/components/marketing/reveal";
 import { cn } from "@/lib/utils";
 
 export const Route = createFileRoute("/about")({
-  head: () => pageMeta("About WIN DEALS — AI Deal Intelligence", "Learn why WIN DEALS is building AI-powered deal intelligence for modern B2B sales teams.", true),
+  head: () => pageMeta("About WIN DEALS — AI Deal Intelligence", "Learn why WIN DEALS is building AI-powered deal intelligence for modern B2B sales teams.", true, "/about"),
   component: About,
 });
 

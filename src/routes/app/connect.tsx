@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { pageMeta } from "@/components/win-deals/page-meta";
 
 export const Route = createFileRoute("/app/connect")({
-  head: () => pageMeta("Connect HubSpot", "Connect and sync a CRM with WIN DEALS."),
+  head: () => pageMeta("Connect HubSpot", "Connect and sync a CRM with WIN DEALS.", false, "/app/connect"),
   component: Connect,
 });
 
