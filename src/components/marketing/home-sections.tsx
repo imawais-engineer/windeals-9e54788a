@@ -247,7 +247,7 @@ function FooterCol({ title, children }: { title: string; children: ReactNode }) 
 
 export function Footer() {
   const a = "transition-colors hover:text-dark-foreground";
-  return <footer className="border-t border-dark-border bg-dark"><div className={cn(wrap, "py-14")}>
+  return <footer className="premium-hero border-t border-hero-border"><div className={cn(wrap, "py-14")}>
     <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
       <div><Logo atmospheric /></div>
       <FooterCol title="Product"><li><a className={a} href="#product">Product</a></li><li><a className={a} href="#how-it-works">How it works</a></li><li><a className={a} href="#early-access">Pricing</a></li><li><a className={a} href="#integrations">Integrations</a></li></FooterCol>
