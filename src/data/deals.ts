@@ -11,7 +11,7 @@ export interface Deal {
 
 const companies = [
   ["acme-corp","Acme Corp",42000,"Negotiation",82,"Healthy"],
-  ["beta-inc","Beta Inc",31000,"Proposal",48,"At Risk"],
+  ["beta-inc","Beta Inc",38000,"Proposal",48,"At Risk"],
   ["gamma-ltd","Gamma Ltd",35000,"Negotiation",31,"Critical"],
   ["delta-co","Delta Co",32000,"Demo",76,"Healthy"],
   ["nova-systems","Nova Systems",30000,"Proposal",88,"Healthy"],
