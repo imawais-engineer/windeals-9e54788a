@@ -50,3 +50,4 @@ export * from "./components/win-deals/logo";
 export * from "./components/win-deals/score";
 export * from "./components/marketing/reveal";
 export * from "./hooks/use-mobile";
+export type { ShowcaseDeal, ShowcaseHealth, StakeholderStatus } from "./data/showcase";
