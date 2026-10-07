@@ -6,7 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Textarea } from "@/components/ui/textarea";
 
-export function EmailDialog({ deal, open, onOpenChange }: { deal?: Deal; open: boolean; onOpenChange: (open: boolean) => void }) {
+export function EmailDialog({ deal, open, onOpenChange }: { deal: Deal | undefined; open: boolean; onOpenChange: (open: boolean) => void }) {
   const [editing, setEditing] = useState(false); const [copied, setCopied] = useState(false);
   if (!deal) return null;
   const subject = `Next steps for ${deal.name}`;

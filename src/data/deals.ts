@@ -11,7 +11,7 @@ export interface Deal {
 
 const companies = [
   ["acme-corp","Acme Corp",42000,"Negotiation",82,"Healthy"],
-  ["beta-inc","Beta Inc",38000,"Proposal",48,"At Risk"],
+  ["beta-inc","Beta Inc",24000,"Proposal",48,"At Risk"],
   ["gamma-ltd","Gamma Ltd",35000,"Negotiation",31,"Critical"],
   ["delta-co","Delta Co",32000,"Demo",76,"Healthy"],
   ["nova-systems","Nova Systems",30000,"Proposal",88,"Healthy"],
@@ -60,9 +60,9 @@ export const deals: Deal[] = companies.map((c, i) => {
   return {
     id, name, value, stage, score, health, owner: i % 3 === 0 ? "Awais" : i % 3 === 1 ? "Sarah Kim" : "Marcus Lee",
     closeDate: `Oct ${12 + (i % 18)}, 2026`,
-    positiveSignals: [positivePool[i % positivePool.length], positivePool[(i + 2) % positivePool.length]],
-    risks: health === "Healthy" ? [riskPool[(i + 3) % riskPool.length]] : [riskPool[i % riskPool.length], riskPool[(i + 2) % riskPool.length]],
-    nextAction: actions[i % actions.length],
+    positiveSignals: [positivePool[i % positivePool.length] ?? "Clear interest from the buying team", positivePool[(i + 2) % positivePool.length] ?? "Next step confirmed"],
+    risks: health === "Healthy" ? [riskPool[(i + 3) % riskPool.length] ?? "Timeline needs confirmation"] : [riskPool[i % riskPool.length] ?? "Momentum is slowing", riskPool[(i + 2) % riskPool.length] ?? "Decision process is unclear"],
+    nextAction: actions[i % actions.length] ?? "Confirm the next decision milestone.",
     diagnosis: `${name} has shown ${health === "Healthy" ? "consistent buying intent" : "interest but uneven momentum"}. ${contact} is the most active contact, and the ${stage.toLowerCase()} activity suggests the team should ${health === "Critical" ? "rebuild urgency before forecasting this deal" : "focus the next touchpoint on a concrete decision milestone"}.`,
     stakeholders: [
       { name: contact, role: "Champion", engagement: "Strong engagement" },
