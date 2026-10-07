@@ -60,7 +60,7 @@ export function IntelligenceLayer() {
     { title: "WIN DEALS", q: "What does it mean?", items: ["Signals", "Risk", "Momentum", "Stakeholder engagement", "AI diagnosis"], focus: true },
     { title: "SALES ACTION", q: "What should I do?", items: ["Prioritize", "Contact", "Follow up", "Resolve risk", "Advance deal"] },
   ];
-  return <section className={cn(section, "bg-dark")}><div className={wrap}>
+  return <section className={cn(section, "premium-hero")}><div className={wrap}>
     <Heading dark title="Your CRM stores the pipeline. WIN DEALS understands it." body="WIN DEALS adds an intelligence layer between your CRM data and your sales actions." />
     <div className="mt-12 grid items-stretch gap-3 lg:grid-cols-[1fr_auto_1fr_auto_1fr]">{steps.flatMap((s, i) => {
       const card = <Reveal key={s.title} delay={i * 100}><div className={cn("h-full rounded-xl border p-6", s.focus ? "border-primary bg-primary/10 ring-1 ring-primary/40" : "border-dark-border bg-dark-surface")}>
