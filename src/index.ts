@@ -46,3 +46,7 @@ export * from "./components/ui/toggle";
 export * from "./components/ui/tooltip";
 export * from "./components/product/product-ui";
 export * from "./lib/utils";
+export * from "./components/win-deals/logo";
+export * from "./components/win-deals/score";
+export * from "./components/marketing/reveal";
+export * from "./hooks/use-mobile";
