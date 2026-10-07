@@ -5,3 +5,5 @@
 - [x] Expand landing page with full problem, intelligence flow, feature, transparency, and workflow sections.
 - [x] Add restrained indigo AI treatment tokens and apply to AI-only surfaces.
 - [x] Revalidate desktop and mobile core flows.
+- [ ] Apply obsidian/emerald marketing hero, interactive command capsule, and floating statistics.
+- [ ] Refine mint status treatments and light app surfaces; verify the complete demo flow.
