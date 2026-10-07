@@ -1,6 +1,8 @@
 {
-  "name": "tanstack_start_ts",
+  "name": "win-deals",
   "private": true,
+  "version": "0.1.0",
+  "description": "WIN DEALS — AI deal intelligence that tells B2B sales teams which deals to win next.",
   "sideEffects": false,
   "type": "module",
   "scripts": {
