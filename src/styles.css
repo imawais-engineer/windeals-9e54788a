@@ -218,6 +218,8 @@
   .hero-product .hero-preview > div:nth-child(2) > div { padding-block: calc(var(--spacing) * 2); }
   .hero-deal-list { margin-top: calc(var(--spacing) * 2); }
   .hero-deal-list > a + a { margin-top: calc(var(--spacing) * 2); }
+  .hero-deal-list > a { padding-block: var(--spacing); }
+  .hero-product { gap: calc(var(--spacing) * 2); }
   .hero-product .hero-float > p, .hero-product .hero-float > div:last-child { margin-top: calc(var(--spacing) * 2); }
 }
 .hero-inner { padding-top: 36px; }
