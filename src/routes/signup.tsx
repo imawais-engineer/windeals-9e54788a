@@ -1,0 +1,1 @@
+import { createFileRoute } from "@tanstack/react-router";import { AuthCard } from "@/components/win-deals/auth-card";import { pageMeta } from "@/components/win-deals/page-meta";export const Route=createFileRoute("/signup")({head:()=>pageMeta("Get started","Create your WIN DEALS workspace."),component:()=> <AuthCard mode="signup"/>});
