@@ -2,7 +2,7 @@
   "meta": {
     "name": "WIN DEALS",
     "package": "@ws-7n6mhrvckq9uj62rqkad/7d3a037f-9ac2-42b2-b222-5ae5c7ea24e7",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "framework": "react",
     "css_framework": "tailwind",
     "starter_template": "custom_design_system_tailwind",
@@ -13,8 +13,10 @@
     "source_manifest": {
       "#enrichment": "8f650df0222ec1c0cc237790e87f304e64cd0e12208d1a27d9d1ab27ac96cb9b",
       ".gitignore": "6d9e901a692b46a83707c245fb03bc91",
+      ".lovable/meta.yaml": "954a981e8847ec1692669dbb04ae9ae9",
       ".lovable/plan/win-deals-mvp-v0-1-2026-10-07.md": "cec1f268606843c683d02ca09860b600",
       ".lovable/project.json": "54748f6bab4135e98602e8651658374f",
+      ".lovable/sources.yaml": "481c3abb0b9226c2cb049e4b8dc127a2",
       ".prettierignore": "7279a476f196a2da5f7edd18db568dc6",
       ".prettierrc": "185ef0234746ab738ac1ab6cec5e2bd9",
       "AGENTS.md": "d23b5454c895ec0ed64aba21e523774d",
@@ -85,6 +87,7 @@
       "src/components/win-deals/score.tsx": "6abf29e876ffb9554a55befca129353e",
       "src/data/deals.ts": "3e8db3481d21e61eaed531246b259d50",
       "src/hooks/use-mobile.tsx": "c0a0bdd4638c391a1dd06ac82074e60b",
+      "src/index.ts": "526c53cf8753e5b8ef5d74c2ae2ab72e",
       "src/lib/error-capture.ts": "f630d9686a9a989170f22eff4de7b30d",
       "src/lib/error-page.ts": "8da0ddd7569bac2676b9a5c8edff8a36",
       "src/lib/lovable-error-reporting.ts": "920280997099588d609de792663bcbf0",
