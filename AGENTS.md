@@ -11,3 +11,5 @@
 
 - Keep all WIN DEALS demo records in the shared frontend data module so dashboard, list, and detail screens remain consistent.
 - Treat the MVP login, signup, onboarding, and CRM sync as frontend-only demo flows because persistent authentication and a live CRM were not requested.
+- Scope atmospheric marketing tokens to the premium hero; keep global semantic tokens light for operational screens so marketing styling never leaks into dense UI.
+- Resolve hero command results from the shared deal dataset and link to existing detail routes so demo intelligence stays consistent.
