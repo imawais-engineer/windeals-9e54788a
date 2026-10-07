@@ -11,7 +11,7 @@ export interface Deal {
 
 const companies = [
   ["acme-corp","Acme Corp",42000,"Negotiation",82,"Healthy"],
-  ["beta-inc","Beta Inc",24000,"Proposal",48,"At Risk"],
+  ["beta-inc","Beta Inc",31000,"Proposal",48,"At Risk"],
   ["gamma-ltd","Gamma Ltd",35000,"Negotiation",31,"Critical"],
   ["delta-co","Delta Co",32000,"Demo",76,"Healthy"],
   ["nova-systems","Nova Systems",30000,"Proposal",88,"Healthy"],
@@ -56,7 +56,9 @@ const actions = [
 
 export const deals: Deal[] = companies.map((c, i) => {
   const [id, name, value, stage, score, health] = c;
-  const contact = ["Maya Chen","Daniel Brooks","Priya Shah","Tom Becker","Elena Ruiz"][i % 5];
+  const contact = ["Maya Chen","Daniel Brooks","Priya Shah","Tom Becker","Elena Ruiz"][i % 5] ?? "Maya Chen";
+  const economicBuyer = ["Alex Morgan","Nina Patel","James Wilson"][i % 3] ?? "Alex Morgan";
+  const evaluator = ["Owen Park","Sofia Diaz","Liam Reed"][i % 3] ?? "Owen Park";
   return {
     id, name, value, stage, score, health, owner: i % 3 === 0 ? "Awais" : i % 3 === 1 ? "Sarah Kim" : "Marcus Lee",
     closeDate: `Oct ${12 + (i % 18)}, 2026`,
@@ -66,8 +68,8 @@ export const deals: Deal[] = companies.map((c, i) => {
     diagnosis: `${name} has shown ${health === "Healthy" ? "consistent buying intent" : "interest but uneven momentum"}. ${contact} is the most active contact, and the ${stage.toLowerCase()} activity suggests the team should ${health === "Critical" ? "rebuild urgency before forecasting this deal" : "focus the next touchpoint on a concrete decision milestone"}.`,
     stakeholders: [
       { name: contact, role: "Champion", engagement: "Strong engagement" },
-      { name: ["Alex Morgan","Nina Patel","James Wilson"][i % 3], role: "Economic buyer", engagement: i % 3 === 0 ? "Engaged" : "Not engaged" },
-      { name: ["Owen Park","Sofia Diaz","Liam Reed"][i % 3], role: "Technical evaluator", engagement: i % 4 === 0 ? "Not engaged" : "Engaged" },
+      { name: economicBuyer, role: "Economic buyer", engagement: i % 3 === 0 ? "Engaged" : "Not engaged" },
+      { name: evaluator, role: "Technical evaluator", engagement: i % 4 === 0 ? "Not engaged" : "Engaged" },
     ],
     activities: [
       { date: "Oct 6", type: "Email", detail: `${contact} replied with implementation questions` },
