@@ -28,7 +28,9 @@ __root.tsx
 
 ## Metadata
 
-Each route defines its own `head()` via `pageMeta()` in `src/components/win-deals/page-meta.ts` (unique title, description, Open Graph and Twitter tags).
+Each content route defines its own `head()` via `pageMeta()` in `src/components/win-deals/page-meta.ts` (unique title, description, Open Graph and Twitter tags, self-referencing canonical and social URL under `https://windeals.me`). Shared website/organization identity is declared in the root; no root canonical is emitted.
+
+The Apex W browser artwork is kept in `src/assets/logos/`. Public exports provide SVG, PNG, ICO, Apple touch and device icons, plus a named web manifest. These identify WIN DEALS in browser tabs, bookmarks and saved shortcuts. Search engines choose their own display and refresh timing; metadata changes require a new publish before reaching the live site.
 
 ## Testing
 

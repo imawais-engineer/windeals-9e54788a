@@ -16,3 +16,5 @@
 - Use the shared Logo component for all brand lockups and compact marks so the vector shape and theme contrast remain consistent.
 - Keep product and architecture documentation in README.md and docs/ so the repository describes WIN DEALS rather than its starter template.
 - Keep the homepage action panel in normal document flow and compact the hero on short landscape windows so its action stays visible without covering deal rows.
+- Define canonical URLs and social page addresses in leaf metadata using https://windeals.me; root metadata owns only shared website identity and branded browser icons.
+- Keep source brand assets under src/assets/logos and derive public browser/device icon exports from the same Apex W artwork to prevent divergent marks.

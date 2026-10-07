@@ -1,6 +1,7 @@
 # WIN DEALS roadmap
 
 ## Done (v0.1)
+- [x] Branded browser and device icons, per-page search names/descriptions/addresses, and website identity.
 - [x] Public, auth, onboarding and core product screens on a shared 25-deal dataset.
 - [x] Obsidian & emerald theme, Plus Jakarta Sans + Instrument Serif, Apex W brand.
 - [x] About, Contact, Privacy and Terms pages.

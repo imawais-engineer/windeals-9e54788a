@@ -1,0 +1,12 @@
+{
+  "name": "WIN DEALS — AI Deal Intelligence",
+  "short_name": "WIN DEALS",
+  "description": "AI deal intelligence for B2B sales teams.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "browser",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
