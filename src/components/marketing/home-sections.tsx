@@ -9,10 +9,10 @@ import { AIInsightCard, AILabel, DealRow, MetricCard, NextBestAction, RiskCard, 
 import { showcaseDeals, showcaseDiagnosis, showcaseNextAction, showcasePipeline, showcaseRisks, showcaseScore, showcaseSignals, showcaseStakeholders } from "@/data/showcase";
 import { Reveal } from "./reveal";
 
-const wrap = "mx-auto max-w-[1240px] px-5 sm:px-8";
-const section = "py-16 sm:py-20 lg:py-28";
+export const wrap = "mx-auto max-w-[1240px] px-5 sm:px-8";
+export const section = "py-16 sm:py-20 lg:py-28";
 
-function Heading({ eyebrow, title, body, dark, center }: { eyebrow?: string; title: string; body?: string; dark?: boolean; center?: boolean }) {
+export function Heading({ eyebrow, title, body, dark, center }: { eyebrow?: string; title: string; body?: string; dark?: boolean; center?: boolean }) {
   return <Reveal className={cn("max-w-2xl", center && "mx-auto text-center")}>
     {eyebrow && <p className={cn("text-xs font-semibold uppercase tracking-wider", dark ? "text-dark-muted" : "text-primary")}>{eyebrow}</p>}
     <h2 className={cn("mt-3 text-[32px] font-bold leading-[1.1] tracking-[-0.03em] sm:text-[40px]", dark && "text-dark-foreground")}>{title}</h2>
@@ -246,13 +246,13 @@ function FooterCol({ title, children }: { title: string; children: ReactNode }) 
 }
 
 export function Footer() {
-  const a = "transition-colors hover:text-dark-foreground";
+  const a = "rounded-sm transition-colors hover:text-dark-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring";
   return <footer className="premium-hero border-t border-hero-border"><div className={cn(wrap, "py-14")}>
     <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
-      <div><Logo atmospheric /></div>
-      <FooterCol title="Product"><li><a className={a} href="#product">Product</a></li><li><a className={a} href="#how-it-works">How it works</a></li><li><a className={a} href="#early-access">Pricing</a></li><li><a className={a} href="#integrations">Integrations</a></li></FooterCol>
-      <FooterCol title="Company"><li>About</li><li>Contact</li></FooterCol>
-      <FooterCol title="Legal"><li>Privacy</li><li>Terms</li></FooterCol>
+      <div><Link to="/" aria-label="WIN DEALS home"><Logo atmospheric /></Link></div>
+      <FooterCol title="Product"><li><Link className={a} to="/" hash="product">Product</Link></li><li><Link className={a} to="/" hash="how-it-works">How it works</Link></li><li><Link className={a} to="/" hash="early-access">Pricing</Link></li><li><Link className={a} to="/" hash="integrations">Integrations</Link></li></FooterCol>
+      <FooterCol title="Company"><li><Link className={a} to="/about">About</Link></li><li><Link className={a} to="/contact">Contact</Link></li></FooterCol>
+      <FooterCol title="Legal"><li><Link className={a} to="/privacy">Privacy</Link></li><li><Link className={a} to="/terms">Terms</Link></li></FooterCol>
     </div>
     <div className="mt-12 flex flex-col justify-between gap-2 border-t border-dark-border pt-6 text-sm text-dark-muted sm:flex-row"><span>© 2026 WIN DEALS</span><span>Built for modern B2B sales teams.</span></div>
   </div></footer>;
