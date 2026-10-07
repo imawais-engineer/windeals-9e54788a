@@ -234,10 +234,10 @@ export function FAQ() {
 }
 
 export function FinalCTA() {
-  return <section className={cn(section, "bg-dark")}><div className={cn(wrap, "text-center")}>
-    <Reveal><h2 className="mx-auto max-w-3xl text-[32px] font-bold leading-[1.1] tracking-[-0.03em] text-dark-foreground sm:text-[44px]">Stop wondering which deals need your attention.</h2>
-      <p className="mx-auto mt-4 max-w-xl text-lg text-dark-muted">Let WIN DEALS turn your CRM pipeline into a clear plan for what to do next.</p>
-      <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row"><Button size="lg" asChild><Link to="/signup">Analyze my pipeline <ArrowRight /></Link></Button><Button size="lg" variant="outline" className="border-dark-border bg-transparent text-dark-foreground hover:bg-dark-surface hover:text-dark-foreground" asChild><Link to="/app/dashboard">See the product</Link></Button></div></Reveal>
+  return <section className={cn(section, "premium-hero")}><div className={cn(wrap, "text-center")}>
+    <Reveal><h2 className="mx-auto max-w-3xl text-[32px] font-bold leading-[1.1] tracking-[-0.03em] text-hero-foreground sm:text-[44px]">Stop wondering which deals <span className="font-editorial font-normal italic tracking-normal text-lime">need your attention.</span></h2>
+      <p className="mx-auto mt-4 max-w-xl text-lg text-hero-muted">Let WIN DEALS turn your CRM pipeline into a clear plan for what to do next.</p>
+      <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row"><Button size="lg" asChild><Link to="/signup">Analyze my pipeline <ArrowRight /></Link></Button><Button size="lg" variant="outline" asChild><Link to="/app/dashboard">See the product</Link></Button></div></Reveal>
   </div></section>;
 }
 
