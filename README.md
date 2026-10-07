@@ -1,75 +1,72 @@
 # WIN DEALS
 
-Build the WIN DEALS frontend (MVP v0.1) according to the product specifications:
+**AI deal intelligence for B2B sales teams.** WIN DEALS reads your CRM pipeline and tells each rep which deals to win next, why a deal is at risk, and the single Next Best Action to move it forward.
 
-Brand: WIN DEALS (descriptor: "AI Deal Intelligence")
-Design Direction: Dark-on-light B2B SaaS interface (Linear/Stripe style). Clean, dense, revenue-focused, high information clarity.
-Colors:
-- Background: #F8FAFC
-- Surface: #FFFFFF, Surface muted: #F1F5F9
-- Text: #0F172A (primary), #475569 (secondary), #94A3B8 (muted)
-- Border: #E2E8F0
-- Brand: #2563EB (Brand light: #EFF6FF)
-- Deal states (only for deal health, never decoration):
-  - Healthy: #16A34A (bg: #F0FDF4)
-  - At Risk: #D97706 (bg: #FFFBEB)
-  - Critical: #DC2626 (bg: #FEF2F2)
-Typography: Inter. Clean hierarchy, restrained radius (8px buttons/inputs, 10-12px cards).
+- Live site: [windeals.me](https://windeals.me)
+- Contact: [awais@windeals.me](mailto:awais@windeals.me)
+- Status: MVP v0.1 — interactive product demo (frontend only, sample data, HubSpot connection is simulated)
 
-App Shell & Navigation:
-- Sidebar (240px): WIN DEALS logo + "AI Deal Intelligence", links for Dashboard (/app/dashboard), Deals (/app/deals), Insights (/app/insights), Settings (/app/settings), plus bottom profile (Awais, awais@windeals.me) and CRM sync indicator.
-- Public & Auth routes: Landing page (/), /login, /signup, /app/onboarding, /app/connect (HubSpot mock sync flow).
+## Product surface
 
-Screens to implement:
-1. Dashboard (/app/dashboard):
-   - Header: "Good morning, Awais. Here's what needs your attention today." with refresh status.
-   - 4 Metric cards: Active Deals (27), Pipeline Value ($486,000), Weighted Pipeline ($312,400), Needs Attention (5 - highlighted).
-   - "Deals Needing Attention" section: Prioritized deal cards showing Deal Name, Value, Stage, WIN SCORE (0-100), Health badge (Healthy/At Risk/Critical), key signal bullets (positive vs risks), Next Best Action banner with "Draft Email" action and "View Deal".
-   - Pipeline Health distribution bar (14 Healthy, 7 At Risk, 6 Critical).
-   - AI Pipeline Insight card ("23% of your active pipeline has had no meaningful activity in the last 7 days").
+| Area | Route | What it does |
+| --- | --- | --- |
+| Landing | `/` | Marketing homepage with a live pipeline preview |
+| Company | `/about`, `/contact` | Mission, product principles, contact form (opens your email app) |
+| Legal | `/privacy`, `/terms` | Policy documents — pending legal review |
+| Auth | `/login`, `/signup` | Demo sign-in and workspace creation |
+| Onboarding | `/app/onboarding`, `/app/connect` | Role setup and simulated HubSpot connection |
+| Deal Command Center | `/app/dashboard` | Pipeline metrics, Priority Queue, deal health, AI insight |
+| Deals | `/app/deals`, `/app/deals/$id` | Prioritized pipeline, WIN Score™, Signal Diagnostics, Next Best Action, email drafts |
+| Insights | `/app/insights` | Inactivity risk, multi-threading, proposal velocity |
+| Settings | `/app/settings` | Profile, CRM sync, notifications, AI frequency |
 
-2. Deals List (/app/deals):
-   - Search bar + filter pills: All (27), Healthy (14), At Risk (7), Critical (6).
-   - Full data table sorted by attention/priority by default, showing Deal, Value, Stage, WIN Score, Health, Next Action, and action links.
+## Tech stack
 
-3. Deal Detail (/app/deals/:id):
-   - Header: Deal name (e.g. Acme Corp), value ($42,000), stage, close date, owner, large WIN SCORE display + Health status.
-   - Score explanation: "Why WIN DEALS thinks this deal is winnable" (positive signals) vs "What could stop you from winning" (risks).
-   - AI Deal Diagnosis box: Contextual narrative based on touchpoints.
-   - NEXT BEST ACTION prominent callout container with "Draft Email" and "Create Task" buttons.
-   - Draft Email Modal: Interactive modal with suggested subject, tailored body, and Copy / Edit / Close actions.
-   - Stakeholders section: Contact roles and engagement status (Engaged, Strong engagement, Not engaged).
-   - Activity Timeline: Chronological touchpoint log (demo, email, proposal opened, calls).
+- [TanStack Start](https://tanstack.com/start) (React 19, file-based routing, SSR) on Vite
+- TypeScript, Tailwind CSS v4, Radix UI primitives
+- Vitest + Testing Library
+- Edge runtime deployment
 
-4. Insights (/app/insights):
-   - Macro pattern cards: Inactivity risk, multi-threaded vs single-threaded analysis, proposal velocity.
+## Getting started
 
-5. Settings (/app/settings):
-   - Profile, CRM integration (HubSpot connected status with Sync button), notifications, AI analysis frequency.
-
-6. Landing Page (/):
-   - Hero: "Know Which Deals to Win.", value proposition, interactive dashboard preview, problem/solution cards, 3-step how-it-works, CTA to Get Started / View Demo.
-
-Mock Data:
-Provide a robust mock dataset of 25 realistic B2B sales deals (Acme Corp, Beta Inc, Gamma Ltd, Delta Co, Nova Systems, Vertex Labs, Orbit Software, Pioneer AI, etc.) totaling ~$486k across Discovery, Demo, Proposal, and Negotiation stages, complete with realistic positive signals, risks, stakeholders, activities, AI diagnoses, and next best actions. Ensure full clickability and interactive navigation between all screens.
-
-This project was built with [Lovable](https://lovable.dev).
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/7d3a037f-9ac2-42b2-b222-5ae5c7ea24e7).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+Requires [Bun](https://bun.sh) (or Node.js 20+ with npm).
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
+bun install
+bun run dev        # http://localhost:8080
+bun run test       # unit + routing tests
+bun run lint
+bun run build
 ```
+
+## Project structure
+
+```text
+src/
+  routes/              File-based routes (one file per page)
+    app/               Authenticated product area (shared AppShell layout)
+  components/
+    marketing/         Homepage sections, public page shell, legal layout
+    product/           Product UI used in the homepage preview
+    win-deals/         App shell, logo, deal cards, score, email dialog
+    ui/                Design-system primitives (buttons, inputs, dialogs…)
+  data/
+    deals.ts           Single source of truth for the 25 sample deals
+    legal.ts           Contact email, legal dates and governing law
+  lib/                 Helpers (class merging, contact handoff, error capture)
+  styles.css           Global obsidian & emerald theme tokens
+  index.ts             Public exports for projects that reuse the design system
+docs/                  Architecture and design notes
+```
+
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) and [docs/DESIGN.md](docs/DESIGN.md) for details.
+
+## Known limitations
+
+- No real authentication or CRM — all data comes from `src/data/deals.ts`.
+- The contact form hands the message to the visitor's email app; no messages are sent by the site.
+- Privacy Policy and Terms show "To be confirmed" for the effective date and governing law until set in `src/data/legal.ts`, and must be reviewed by counsel before launch.
+
+## License
+
+Proprietary. © WIN DEALS. All rights reserved.

@@ -1,10 +1,13 @@
 # WIN DEALS roadmap
 
-- [x] Build public, auth, onboarding, and core product screens.
-- [x] Add 25 realistic deals totaling $486,000 and requested interactions.
-- [x] Expand landing page with full problem, intelligence flow, feature, transparency, and workflow sections.
-- [x] Apply restrained emerald AI treatment tokens to intelligence surfaces.
-- [x] Revalidate desktop and mobile core flows.
-- [x] Apply obsidian/emerald marketing hero, interactive command capsule, and floating statistics.
-- [x] Refine mint status treatments and light app surfaces; verify the complete demo flow.
-- [x] Apply Apex W logo and command-first feature names; verify branding and demo actions.
+## Done (v0.1)
+- [x] Public, auth, onboarding and core product screens on a shared 25-deal dataset.
+- [x] Obsidian & emerald theme, Plus Jakarta Sans + Instrument Serif, Apex W brand.
+- [x] About, Contact, Privacy and Terms pages.
+- [x] Repository cleanup: README, docs, branded favicon, template leftovers removed.
+
+## Open
+- [ ] Legal effective date and governing law — waiting on owner; legal review before launch.
+- [ ] Real email delivery for the contact form — waiting on owner's decision.
+- [ ] Align app sample data with homepage figures — waiting on owner's decision.
+- [ ] Final logo files — waiting on owner upload.
