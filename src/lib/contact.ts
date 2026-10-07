@@ -6,7 +6,7 @@ export const contactTopics = ["Product question", "Early access", "Sales", "Part
 export const contactSchema = z.object({
   name: z.string().trim().min(1, "Please enter your name").max(100),
   email: z.string().trim().min(1, "Please enter your email").email("Please enter a valid email address").max(255),
-  company: z.string().trim().max(120).optional(),
+  company: z.string().trim().max(120),
   topic: z.enum(contactTopics),
   message: z.string().trim().min(1, "Please enter a message").max(2000),
 });
