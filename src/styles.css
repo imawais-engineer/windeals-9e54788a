@@ -70,6 +70,8 @@
   --color-overlay: var(--overlay);
   --color-hubspot: var(--hubspot);
   --color-hubspot-soft: var(--hubspot-soft);
+  --color-ai: var(--ai);
+  --color-ai-soft: var(--ai-soft);
   --shadow-card: 0 1px 2px oklch(0.129 0.042 264.695 / 0.04);
   --shadow-preview: 0 24px 70px oklch(0.129 0.042 264.695 / 0.14);
 }
@@ -118,6 +120,8 @@
   --overlay: oklch(0.129 0.042 264.695 / 0.45);
   --hubspot: oklch(0.66 0.19 36);
   --hubspot-soft: oklch(0.97 0.026 45);
+  --ai: oklch(0.511 0.23 276.966);
+  --ai-soft: oklch(0.962 0.018 272.314);
 }
 
 .dark {
