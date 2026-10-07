@@ -22,21 +22,21 @@ export function Heading({ eyebrow, title, body, dark, center }: { eyebrow?: stri
 
 export function Hero() {
   return <section className="premium-hero overflow-hidden border-b border-hero-border">
-    <div className={cn(wrap, "grid items-center gap-14 py-14 sm:py-20 lg:grid-cols-[45fr_55fr] lg:py-24")}>
-      <div className="hero-enter">
+    <div className={cn(wrap, "hero-layout grid items-center gap-8 py-8 md:grid-cols-[40fr_60fr] md:gap-6 lg:grid-cols-[45fr_55fr] lg:gap-10")}>
+      <div className="hero-enter hero-copy min-w-0">
         <p className="text-xs font-semibold uppercase tracking-wider text-mint">AI Deal Intelligence</p>
         <h1 className="mt-4 text-[40px] font-bold leading-[1.08] tracking-[-0.04em] text-hero-foreground sm:text-[56px] sm:leading-[1.05] xl:text-[62px]">Know which deals to win <span className="font-editorial font-normal italic tracking-normal text-lime">before they slip away.</span></h1>
         <p className="mt-6 max-w-xl text-base leading-relaxed text-hero-muted sm:text-lg">WIN DEALS analyzes your CRM activity, buying signals, stakeholder engagement, and deal momentum to show you which opportunities need attention, why they're at risk, and what to do next.</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row"><Button size="lg" asChild><Link to="/signup">Analyze my pipeline <ArrowRight /></Link></Button><Button size="lg" variant="outline" asChild><a href="#how-it-works">See how it works</a></Button></div>
         <p className="mt-6 flex items-center gap-2 text-sm font-medium text-hero-muted"><Check className="size-4 text-mint" />Works with your existing CRM. No CRM replacement required.</p>
       </div>
-      <div id="product" className="relative scroll-mt-24 pb-32 sm:pb-28">
+      <div id="product" className="hero-product relative grid min-w-0 gap-3 scroll-mt-24">
         <div className="hero-preview rounded-xl border border-border bg-card p-4 shadow-preview sm:p-5">
           <div className="flex items-center justify-between"><div className="flex items-center gap-2"><span className="relative flex size-2"><span className="absolute inline-flex size-full rounded-full bg-healthy opacity-60 motion-safe:animate-ping [animation-iteration-count:3]" /><span className="relative inline-flex size-2 rounded-full bg-healthy" /></span><h2 className="text-sm font-semibold">Pipeline Intelligence</h2></div><span className="text-xs text-muted-foreground">Updated just now</span></div>
           <div className="mt-4 grid grid-cols-2 gap-3"><MetricCard label="Active Deals" value={showcasePipeline.activeDeals} className="bg-background" /><MetricCard label="Pipeline" value={showcasePipeline.pipelineValue} className="bg-background" /></div>
-          <div className="mt-4 space-y-2.5">{showcaseDeals.map((d) => <DealRow key={d.id} deal={d} />)}</div>
+          <div className="hero-deal-list mt-4 space-y-2.5">{showcaseDeals.map((d) => <DealRow key={d.id} deal={d} />)}</div>
         </div>
-        <NextBestAction text={showcaseNextAction} className="hero-float absolute -bottom-6 right-0 w-[min(320px,88%)] sm:-right-4 lg:-right-6" />
+        <NextBestAction text={showcaseNextAction} className="hero-float w-full" />
       </div>
     </div>
   </section>;
