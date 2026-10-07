@@ -217,7 +217,7 @@ export function EarlyAccess() {
   </div></section>;
 }
 
-const faqs = [
+const faqs: [string, string][] = [
   ["What is WIN DEALS?", "WIN DEALS is an AI Deal Intelligence platform that analyzes your CRM pipeline to identify deal risk, uncover buying signals, and recommend the next best action."],
   ["Is WIN DEALS a CRM?", "No. WIN DEALS is an intelligence layer that works on top of your existing CRM. Your CRM remains the system of record."],
   ["Which CRM do you support?", "WIN DEALS is initially focused on HubSpot. Additional CRM integrations may be added as the product evolves."],
