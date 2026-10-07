@@ -14,4 +14,23 @@ describe("App routing", () => {
 
     expect(matches.at(-1)?.routeId).not.toBe(rootRouteId);
   });
+
+  it("matches every requested WIN DEALS screen", () => {
+    const router = createRouter({ routeTree, context: { queryClient: new QueryClient() } });
+    const paths = [
+      "/login",
+      "/signup",
+      "/app/onboarding",
+      "/app/connect",
+      "/app/dashboard",
+      "/app/deals",
+      "/app/deals/acme-corp",
+      "/app/insights",
+      "/app/settings",
+    ];
+
+    for (const path of paths) {
+      expect(router.matchRoutes(path).at(-1)?.routeId, path).not.toBe(rootRouteId);
+    }
+  });
 });
