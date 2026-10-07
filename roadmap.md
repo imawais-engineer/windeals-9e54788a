@@ -7,3 +7,4 @@
 - [x] Revalidate desktop and mobile core flows.
 - [x] Apply obsidian/emerald marketing hero, interactive command capsule, and floating statistics.
 - [x] Refine mint status treatments and light app surfaces; verify the complete demo flow.
+- [x] Apply Apex W logo and command-first feature names; verify branding and demo actions.
