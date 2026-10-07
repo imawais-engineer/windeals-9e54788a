@@ -1,3 +1,4 @@
+import hubspotLogo from "@/assets/logos/hubspot.svg";
 import type { ReactNode } from "react";
 import { Link } from "@tanstack/react-router";
 import { AlertTriangle, ArrowDown, ArrowRight, Check, Database, FileSearch, Layers, ShieldCheck, Sparkles, Target, UserCheck, Workflow } from "lucide-react";
@@ -185,7 +186,7 @@ export function Integration() {
       <Reveal><div className="mt-8"><Button asChild><Link to="/signup">Connect HubSpot <ArrowRight /></Link></Button><p className="mt-3 text-sm text-muted-foreground">You'll connect HubSpot during onboarding.</p></div></Reveal>
     </div>
     <Reveal><div className="mx-auto flex w-full max-w-sm flex-col items-center gap-2 rounded-xl border border-border bg-card p-8">
-      <div className="flex w-full items-center justify-center gap-3 rounded-lg border border-border bg-background px-4 py-4"><img src="/integrations/hubspot.svg" alt="" className="size-7" /><span className="text-lg font-bold">HubSpot</span></div>
+      <div className="flex w-full items-center justify-center gap-3 rounded-lg border border-border bg-background px-4 py-4"><img src={hubspotLogo} alt="" className="size-7" /><span className="text-lg font-bold">HubSpot</span></div>
       <ArrowDown className="size-4 text-muted-foreground" />
       <div className="flex w-full justify-center rounded-lg border border-primary/30 bg-brand-soft px-4 py-4"><Logo /></div>
       <ArrowDown className="size-4 text-muted-foreground" />

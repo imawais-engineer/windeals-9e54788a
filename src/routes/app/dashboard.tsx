@@ -8,7 +8,7 @@ import { DealCard } from "@/components/win-deals/deal-card";
 import { EmailDialog } from "@/components/win-deals/email-dialog";
 import { pageMeta } from "@/components/win-deals/page-meta";
 
-export const Route = createFileRoute("/app/dashboard")({ head:()=>pageMeta("Deal Command Center","Prioritized deal intelligence and pipeline health for WIN DEALS."), component: Dashboard });
+export const Route = createFileRoute("/app/dashboard")({ head:()=>pageMeta("Deal Command Center", "Prioritized deal intelligence and pipeline health for WIN DEALS.", false, "/app/dashboard"), component: Dashboard });
 function Dashboard(){
  const [draft,setDraft]=useState<Deal>(); const [refreshed,setRefreshed]=useState(false);
  const attention=deals.filter(d=>d.health!=="Healthy").sort((a,b)=>a.score-b.score).slice(0,5);
