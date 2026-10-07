@@ -5,9 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Logo } from "@/components/win-deals/logo";
 
 export const marketingNav = [
-  { href: "#product", label: "Product" },
-  { href: "#how-it-works", label: "How it works" },
-  { href: "#early-access", label: "Pricing" },
+  { hash: "product", label: "Product" },
+  { hash: "how-it-works", label: "How it works" },
+  { hash: "early-access", label: "Pricing" },
 ];
 
 export function SiteHeader() {
@@ -15,12 +15,12 @@ export function SiteHeader() {
   return <header className="premium-hero sticky top-0 z-50 border-b border-hero-border bg-hero-canvas/85 backdrop-blur-md">
     <div className="mx-auto flex h-[70px] max-w-[1240px] items-center justify-between px-5 sm:px-8">
       <Link to="/" aria-label="WIN DEALS home"><Logo atmospheric /></Link>
-      <nav className="hidden items-center gap-8 md:flex" aria-label="Main">{marketingNav.map((n) => <a key={n.href} href={n.href} className="text-sm font-medium text-hero-muted transition-colors hover:text-hero-foreground">{n.label}</a>)}</nav>
+      <nav className="hidden items-center gap-8 md:flex" aria-label="Main">{marketingNav.map((n) => <Link key={n.hash} to="/" hash={n.hash} className="text-sm font-medium text-hero-muted transition-colors hover:text-hero-foreground">{n.label}</Link>)}</nav>
       <div className="hidden items-center gap-2 md:flex"><Button variant="ghost" className="text-hero-foreground hover:text-hero-foreground" asChild><Link to="/login">Log in</Link></Button><Button asChild><Link to="/signup">Get started <ArrowRight /></Link></Button></div>
       <Button variant="ghost" size="icon" className="text-hero-foreground md:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</Button>
     </div>
     {open && <div className="border-t border-hero-border bg-hero-canvas px-5 pb-5 md:hidden">
-      <nav className="flex flex-col py-2" aria-label="Mobile">{marketingNav.map((n) => <a key={n.href} href={n.href} onClick={() => setOpen(false)} className="py-3 text-base font-medium text-hero-foreground">{n.label}</a>)}</nav>
+      <nav className="flex flex-col py-2" aria-label="Mobile">{marketingNav.map((n) => <Link key={n.hash} to="/" hash={n.hash} onClick={() => setOpen(false)} className="py-3 text-base font-medium text-hero-foreground">{n.label}</Link>)}</nav>
       <div className="grid gap-2 border-t border-hero-border pt-4"><Button variant="outline" asChild><Link to="/login">Log in</Link></Button><Button asChild><Link to="/signup">Get started <ArrowRight /></Link></Button></div>
     </div>}
   </header>;

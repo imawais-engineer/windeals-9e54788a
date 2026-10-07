@@ -1,5 +1,5 @@
-export function pageMeta(title: string, description: string) {
-  const fullTitle = `${title} — WIN DEALS`;
+export function pageMeta(title: string, description: string, exactTitle = false) {
+  const fullTitle = exactTitle ? title : `${title} — WIN DEALS`;
   return { meta: [
     { title: fullTitle }, { name: "description", content: description },
     { property: "og:title", content: fullTitle }, { property: "og:description", content: description },
