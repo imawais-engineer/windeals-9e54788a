@@ -18,3 +18,4 @@
 - Keep the homepage action panel in normal document flow and compact the hero on short landscape windows so its action stays visible without covering deal rows.
 - Define canonical URLs and social page addresses in leaf metadata using https://windeals.me; root metadata owns only shared website identity and branded browser icons.
 - Keep source brand assets under src/assets/logos and derive public browser/device icon exports from the same Apex W artwork to prevent divergent marks.
+- Preserve CSS as a package side effect, while keeping theme loading explicit so consumer styling setup does not load the global stylesheet twice.
