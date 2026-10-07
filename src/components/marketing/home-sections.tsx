@@ -30,13 +30,13 @@ export function Hero() {
         <div className="mt-8 flex flex-col gap-3 sm:flex-row"><Button size="lg" asChild><Link to="/signup">Analyze my pipeline <ArrowRight /></Link></Button><Button size="lg" variant="outline" asChild><a href="#how-it-works">See how it works</a></Button></div>
         <p className="mt-6 flex items-center gap-2 text-sm font-medium text-muted-foreground"><Check className="size-4 text-healthy" />Works with your existing CRM. No CRM replacement required.</p>
       </div>
-      <div id="product" className="relative scroll-mt-24 pb-24 sm:pb-16">
+      <div id="product" className="relative scroll-mt-24 pb-32 sm:pb-28">
         <div className="hero-preview rounded-xl border border-border bg-card p-4 shadow-preview sm:p-5">
           <div className="flex items-center justify-between"><div className="flex items-center gap-2"><span className="relative flex size-2"><span className="absolute inline-flex size-full rounded-full bg-healthy opacity-60 motion-safe:animate-ping [animation-iteration-count:3]" /><span className="relative inline-flex size-2 rounded-full bg-healthy" /></span><h2 className="text-sm font-semibold">Pipeline Intelligence</h2></div><span className="text-xs text-muted-foreground">Updated just now</span></div>
           <div className="mt-4 grid grid-cols-2 gap-3"><MetricCard label="Active Deals" value={showcasePipeline.activeDeals} className="bg-background" /><MetricCard label="Pipeline" value={showcasePipeline.pipelineValue} className="bg-background" /></div>
           <div className="mt-4 space-y-2.5">{showcaseDeals.map((d) => <DealRow key={d.id} deal={d} />)}</div>
         </div>
-        <NextBestAction text={showcaseNextAction} className="hero-float absolute -bottom-2 right-0 w-[min(320px,88%)] sm:-right-4 lg:-right-6" />
+        <NextBestAction text={showcaseNextAction} className="hero-float absolute -bottom-6 right-0 w-[min(320px,88%)] sm:-right-4 lg:-right-6" />
       </div>
     </div>
   </section>;
