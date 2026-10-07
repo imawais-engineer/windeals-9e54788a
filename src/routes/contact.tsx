@@ -21,7 +21,7 @@ export const Route = createFileRoute("/contact")({
   component: Contact,
 });
 
-const faqs = [
+const faqs: [string, string][] = [
   ["What is WIN DEALS?", "WIN DEALS is an AI Deal Intelligence platform that analyzes your CRM pipeline to identify deal risk, buying signals, and recommended next actions."],
   ["Can I get early access?", "Yes. Use the contact form and select Early Access, or use the Get Started CTA."],
   ["Which CRM do you support?", "WIN DEALS is initially focused on HubSpot."],
