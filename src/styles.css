@@ -19,7 +19,7 @@
  */
 
 @theme inline {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-editorial: "Instrument Serif", Georgia, serif;
   --tracking-tight: -0.02em;
   --radius-sm: calc(var(--radius) - 4px);
@@ -84,6 +84,7 @@
   --color-hubspot-soft: var(--hubspot-soft);
   --color-ai: var(--ai);
   --color-ai-soft: var(--ai-soft);
+  --color-hero-canvas: var(--hero-canvas);
   --color-hero-foreground: var(--hero-foreground);
   --color-hero-muted: var(--hero-muted);
   --color-hero-border: var(--hero-border);
@@ -163,7 +164,11 @@
 }
 
 .premium-hero {
-  background: var(--hero-canvas);
+  background:
+    radial-gradient(900px 520px at 12% -12%, oklch(0.45 0.12 160 / 0.38), transparent 62%),
+    radial-gradient(760px 460px at 92% 6%, oklch(0.55 0.15 150 / 0.24), transparent 58%),
+    radial-gradient(620px 420px at 55% 110%, oklch(0.4 0.1 165 / 0.28), transparent 60%),
+    var(--hero-canvas);
   color: var(--hero-foreground);
   --primary: var(--lime);
   --primary-foreground: var(--hero-canvas);
@@ -172,6 +177,14 @@
   --accent: var(--hero-glass);
   --accent-foreground: var(--hero-foreground);
   --ring: var(--mint);
+}
+.premium-hero .hero-preview, .premium-hero .hero-float {
+  --background: oklch(0.984 0.003 247.858);
+  --accent: oklch(0.968 0.007 247.896);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.546 0.215 262.9);
+  color: var(--foreground);
 }
 .hero-atmosphere { opacity: .85; }
 .hero-inner { padding-top: 36px; }

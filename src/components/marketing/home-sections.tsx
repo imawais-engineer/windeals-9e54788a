@@ -21,14 +21,14 @@ function Heading({ eyebrow, title, body, dark, center }: { eyebrow?: string; tit
 }
 
 export function Hero() {
-  return <section className="overflow-hidden border-b border-border">
+  return <section className="premium-hero overflow-hidden border-b border-hero-border">
     <div className={cn(wrap, "grid items-center gap-14 py-14 sm:py-20 lg:grid-cols-[45fr_55fr] lg:py-24")}>
       <div className="hero-enter">
-        <p className="text-xs font-semibold uppercase tracking-wider text-primary">AI Deal Intelligence</p>
-        <h1 className="mt-4 text-[40px] font-bold leading-[1.08] tracking-[-0.04em] sm:text-[56px] sm:leading-[1.05] xl:text-[62px]">Know which deals to win before they slip away.</h1>
-        <p className="mt-6 max-w-xl text-base leading-relaxed text-secondary-foreground sm:text-lg">WIN DEALS analyzes your CRM activity, buying signals, stakeholder engagement, and deal momentum to show you which opportunities need attention, why they're at risk, and what to do next.</p>
+        <p className="text-xs font-semibold uppercase tracking-wider text-mint">AI Deal Intelligence</p>
+        <h1 className="mt-4 text-[40px] font-bold leading-[1.08] tracking-[-0.04em] text-hero-foreground sm:text-[56px] sm:leading-[1.05] xl:text-[62px]">Know which deals to win <span className="font-editorial font-normal italic tracking-normal text-lime">before they slip away.</span></h1>
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-hero-muted sm:text-lg">WIN DEALS analyzes your CRM activity, buying signals, stakeholder engagement, and deal momentum to show you which opportunities need attention, why they're at risk, and what to do next.</p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row"><Button size="lg" asChild><Link to="/signup">Analyze my pipeline <ArrowRight /></Link></Button><Button size="lg" variant="outline" asChild><a href="#how-it-works">See how it works</a></Button></div>
-        <p className="mt-6 flex items-center gap-2 text-sm font-medium text-muted-foreground"><Check className="size-4 text-healthy" />Works with your existing CRM. No CRM replacement required.</p>
+        <p className="mt-6 flex items-center gap-2 text-sm font-medium text-hero-muted"><Check className="size-4 text-mint" />Works with your existing CRM. No CRM replacement required.</p>
       </div>
       <div id="product" className="relative scroll-mt-24 pb-32 sm:pb-28">
         <div className="hero-preview rounded-xl border border-border bg-card p-4 shadow-preview sm:p-5">
@@ -234,10 +234,10 @@ export function FAQ() {
 }
 
 export function FinalCTA() {
-  return <section className={cn(section, "bg-dark")}><div className={cn(wrap, "text-center")}>
-    <Reveal><h2 className="mx-auto max-w-3xl text-[32px] font-bold leading-[1.1] tracking-[-0.03em] text-dark-foreground sm:text-[44px]">Stop wondering which deals need your attention.</h2>
-      <p className="mx-auto mt-4 max-w-xl text-lg text-dark-muted">Let WIN DEALS turn your CRM pipeline into a clear plan for what to do next.</p>
-      <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row"><Button size="lg" asChild><Link to="/signup">Analyze my pipeline <ArrowRight /></Link></Button><Button size="lg" variant="outline" className="border-dark-border bg-transparent text-dark-foreground hover:bg-dark-surface hover:text-dark-foreground" asChild><Link to="/app/dashboard">See the product</Link></Button></div></Reveal>
+  return <section className={cn(section, "premium-hero")}><div className={cn(wrap, "text-center")}>
+    <Reveal><h2 className="mx-auto max-w-3xl text-[32px] font-bold leading-[1.1] tracking-[-0.03em] text-hero-foreground sm:text-[44px]">Stop wondering which deals <span className="font-editorial font-normal italic tracking-normal text-lime">need your attention.</span></h2>
+      <p className="mx-auto mt-4 max-w-xl text-lg text-hero-muted">Let WIN DEALS turn your CRM pipeline into a clear plan for what to do next.</p>
+      <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row"><Button size="lg" asChild><Link to="/signup">Analyze my pipeline <ArrowRight /></Link></Button><Button size="lg" variant="outline" asChild><Link to="/app/dashboard">See the product</Link></Button></div></Reveal>
   </div></section>;
 }
 
@@ -247,7 +247,7 @@ function FooterCol({ title, children }: { title: string; children: ReactNode }) 
 
 export function Footer() {
   const a = "transition-colors hover:text-dark-foreground";
-  return <footer className="border-t border-dark-border bg-dark"><div className={cn(wrap, "py-14")}>
+  return <footer className="premium-hero border-t border-hero-border"><div className={cn(wrap, "py-14")}>
     <div className="grid gap-10 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
       <div><Logo atmospheric /></div>
       <FooterCol title="Product"><li><a className={a} href="#product">Product</a></li><li><a className={a} href="#how-it-works">How it works</a></li><li><a className={a} href="#early-access">Pricing</a></li><li><a className={a} href="#integrations">Integrations</a></li></FooterCol>
