@@ -4,4 +4,4 @@
 - [x] Add 25 realistic deals totaling $486,000 and requested interactions.
 - [x] Expand landing page with full problem, intelligence flow, feature, transparency, and workflow sections.
 - [x] Add restrained indigo AI treatment tokens and apply to AI-only surfaces.
-- [ ] Revalidate desktop and mobile core flows.
+- [x] Revalidate desktop and mobile core flows.
