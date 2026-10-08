@@ -33,7 +33,7 @@ export function Hero() {
       </div>
       <div id="product" className="hero-product relative grid min-w-0 gap-3 scroll-mt-24">
         <div className="hero-preview rounded-xl border border-border bg-card p-4 shadow-preview sm:p-5">
-          <div className="flex items-center justify-between"><div className="flex items-center gap-2"><span className="relative flex size-2"><span className="absolute inline-flex size-full rounded-full bg-healthy opacity-60 motion-safe:animate-ping [animation-iteration-count:3]" /><span className="relative inline-flex size-2 rounded-full bg-healthy" /></span><h2 className="text-sm font-semibold">Pipeline Intelligence</h2></div><span className="text-xs text-muted-foreground">Updated just now</span></div>
+          <div className="flex items-center justify-between"><div className="flex items-center gap-2"><span className="relative flex size-2"><span className="absolute inline-flex size-full rounded-full bg-healthy opacity-60 motion-safe:animate-ping [animation-iteration-count:3]" /><span className="relative inline-flex size-2 rounded-full bg-healthy" /></span><h2 className="text-sm font-semibold">Pipeline Intelligence</h2></div><span className="text-xs text-muted-foreground">Sample data</span></div>
           <div className="mt-4 grid grid-cols-2 gap-3"><MetricCard label="Active Deals" value={showcasePipeline.activeDeals} className="bg-background" /><MetricCard label="Pipeline" value={showcasePipeline.pipelineValue} className="bg-background" /></div>
           <div className="hero-deal-list mt-4 space-y-2.5">{showcaseDeals.map((d) => <DealRow key={d.id} deal={d} />)}</div>
         </div>
