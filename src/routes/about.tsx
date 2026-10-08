@@ -13,10 +13,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const beliefs = [
-  { icon: Lightbulb, t: "Intelligence should be actionable", d: "Information is useful when it helps someone make a better decision." },
-  { icon: Radar, t: "AI should work from evidence", d: "AI should interpret real business signals rather than produce vague recommendations." },
-  { icon: UserCheck, t: "Salespeople should stay in control", d: "Technology should help salespeople make better decisions, not remove them from the process." },
-  { icon: ShieldCheck, t: "Your CRM should remain yours", d: "WIN DEALS is designed to add intelligence to your existing sales systems, not force teams to replace them." },
+  { icon: Lightbulb, t: "Intelligence should be actionable", d: "Insights should lead to a clear decision or next step." },
+  { icon: Radar, t: "AI should work from evidence", d: "Recommendations should be grounded in observable deal signals and context." },
+  { icon: UserCheck, t: "Salespeople should stay in control", d: "WIN DEALS recommends. The salesperson decides." },
+  { icon: ShieldCheck, t: "Your CRM should remain yours", d: "WIN DEALS adds intelligence without requiring teams to replace their CRM." },
 ];
 const flow = [
   { icon: Database, t: "CRM Data", d: "Deals, contacts, emails, meetings, stages" },
@@ -25,7 +25,7 @@ const flow = [
   { icon: Gauge, t: "Deal Priority", d: "Which opportunities need attention first" },
   { icon: Target, t: "Next Best Action", d: "One clear recommended step", focus: true },
   { icon: Briefcase, t: "Sales Action", d: "The salesperson decides and acts" },
-  { icon: TrendingUp, t: "Outcome", d: "Results inform future recommendations" },
+  { icon: TrendingUp, t: "Outcome", d: "Long-term: outcomes inform future recommendations" },
 ];
 const principles = [
   { icon: ListChecks, t: "Prioritize, don't overwhelm", d: "Salespeople should quickly know which opportunities deserve attention." },
