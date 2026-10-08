@@ -95,8 +95,8 @@ export function HowAIWorks() {
 export function WinScoreSection() {
   return <section className={cn(section, "border-y border-border bg-card")}><div className={cn(wrap, "grid items-center gap-12 lg:grid-cols-2")}>
     <div>
-      <Heading eyebrow="WIN Score" title="Know which deals deserve your attention." body="Every active deal receives a 0–100 WIN Score based on measurable pipeline signals and deal context." />
-      <Reveal><div className="mt-8 rounded-lg border border-border bg-background p-4 text-sm leading-relaxed text-secondary-foreground"><strong className="text-foreground">WIN Score ≠ Health.</strong> A deal can have a strong score while still carrying a specific risk that needs action today.</div></Reveal>
+      <Heading eyebrow="WIN Score" title="Know which deals deserve your attention." body="WIN DEALS evaluates active opportunities using a 0–100 WIN Score based on pipeline signals and deal context. The score is designed to help sales teams prioritize attention — not to guarantee an outcome." />
+      <Reveal><div className="mt-8 rounded-lg border border-border bg-background p-4 text-sm leading-relaxed text-secondary-foreground"><strong className="text-foreground">WIN Score ≠ Health.</strong> A deal can have a strong WIN Score while still carrying a specific risk that needs attention today.</div></Reveal>
     </div>
     <Reveal><div className="rounded-xl border border-border bg-background p-6 shadow-card sm:p-8">
       <div className="flex items-start justify-between gap-4"><div><div className="text-sm font-semibold">Acme Corp</div><div className="text-xs text-muted-foreground">$42K · Proposal</div></div><StatusBadge health="at_risk" /></div>
@@ -171,10 +171,10 @@ function VerticalFlow({ items, title, accentLast }: { items: string[]; title: st
 
 export function LearningLoop() {
   return <section className={cn(section, "border-y border-border bg-muted/50")}><div className={wrap}>
-    <Heading eyebrow="Product direction" title="Every deal makes the system smarter." body="Over time, historical deal outcomes can help WIN DEALS understand patterns across companies, industries, and sales teams." />
+    <Heading eyebrow="Long-term product direction" title="Where WIN DEALS is going" body="WIN DEALS starts by helping sales teams understand their current pipeline. Over time, historical deal outcomes can help the system identify patterns and improve the relevance of future recommendations." />
     <div className="mt-12 grid gap-4 md:grid-cols-2">
-      <Reveal><VerticalFlow title="Today" items={["Connect CRM", "Analyze pipeline", "Identify signals", "Prioritize deals", "Take action", "Learn from outcomes"]} /></Reveal>
-      <Reveal delay={80}><VerticalFlow title="Over time" accentLast items={["Recommendation", "Sales Action", "Deal Outcome", "Won / Lost", "Historical Intelligence", "Better Future Recommendations"]} /></Reveal>
+      <Reveal><VerticalFlow title="Today" items={["Connect CRM", "Analyze pipeline", "Identify signals", "Prioritize deals", "Take action"]} /></Reveal>
+      <Reveal delay={80}><VerticalFlow title="Over time" accentLast items={["Recommendation", "Sales action", "Deal outcome", "Won / Lost", "Historical intelligence", "Better future recommendations"]} /></Reveal>
     </div>
   </div></section>;
 }
@@ -212,19 +212,19 @@ export function EarlyAccess() {
   const features = ["CRM pipeline intelligence", "WIN Scores", "Deal risk detection", "AI diagnosis", "Next Best Actions", "AI email drafts"];
   return <section id="early-access" className={cn(section, "scroll-mt-16")}><div className={wrap}>
     <Reveal><div className="mx-auto grid max-w-4xl gap-10 rounded-2xl border border-border bg-card p-8 shadow-card sm:p-12 md:grid-cols-[1.1fr_1fr]">
-      <div><p className="text-xs font-semibold uppercase tracking-wider text-primary">Early access</p><h2 className="mt-3 text-[32px] font-bold leading-[1.1] tracking-[-0.03em] sm:text-[40px]">Get early access to WIN DEALS.</h2><p className="mt-4 text-secondary-foreground">Turn your existing CRM pipeline into a prioritized plan for what to do next.</p><Button size="lg" className="mt-8" asChild><Link to="/signup">Join early access <ArrowRight /></Link></Button></div>
+      <div><p className="text-xs font-semibold uppercase tracking-wider text-primary">Early access</p><h2 className="mt-3 text-[32px] font-bold leading-[1.1] tracking-[-0.03em] sm:text-[40px]">Get early access to WIN DEALS.</h2><p className="mt-4 text-secondary-foreground">Turn your existing CRM pipeline into a prioritized plan for what to do next.</p><p className="mt-3 text-sm text-muted-foreground">WIN DEALS is currently being built for B2B sales teams using HubSpot. Join early access as we develop the first version of the platform.</p><Button size="lg" className="mt-8" asChild><Link to="/signup">Join early access <ArrowRight /></Link></Button></div>
       <ul className="space-y-3 self-center">{features.map((f) => <li key={f} className="flex items-center gap-3 text-[15px] font-medium"><span className="grid size-5 place-items-center rounded-full bg-healthy-soft text-healthy"><Check className="size-3" /></span>{f}</li>)}</ul>
     </div></Reveal>
   </div></section>;
 }
 
 const faqs: [string, string][] = [
-  ["What is WIN DEALS?", "WIN DEALS is an AI Deal Intelligence platform that analyzes your CRM pipeline to identify deal risk, uncover buying signals, and recommend the next best action."],
-  ["Is WIN DEALS a CRM?", "No. WIN DEALS is an intelligence layer that works on top of your existing CRM. Your CRM remains the system of record."],
-  ["Which CRM do you support?", "WIN DEALS is initially focused on HubSpot. Additional CRM integrations may be added as the product evolves."],
-  ["Does WIN DEALS automatically send emails?", "Not initially. WIN DEALS can generate an AI-assisted email draft, while the salesperson remains in control of sending it."],
-  ["How is the WIN Score calculated?", "The WIN Score combines structured deal signals such as engagement, momentum, stakeholder coverage, activity recency, timing, buying signals, and risk signals."],
-  ["Does AI replace the salesperson?", "No. WIN DEALS helps salespeople understand their pipeline faster and decide what to do next. The salesperson remains in control of the action."],
+  ["What is WIN DEALS?", "WIN DEALS is an AI Deal Intelligence platform that analyzes CRM pipeline data to identify deal risk, surface buying signals, and recommend the next best action."],
+  ["Is WIN DEALS a CRM?", "No. WIN DEALS is an intelligence layer that works on top of your existing CRM. Your CRM remains your system of record."],
+  ["Which CRM do you support?", "WIN DEALS is initially being built around HubSpot. Additional CRM integrations may be introduced as the product develops."],
+  ["Does WIN DEALS automatically send emails?", "Not by default. WIN DEALS can generate suggested email drafts while the salesperson remains in control of reviewing and sending them."],
+  ["How is the WIN Score calculated?", "The WIN Score combines structured pipeline signals such as engagement, activity, momentum, stakeholder coverage, timing, and deal progression. It is designed to help prioritize attention rather than guarantee an outcome."],
+  ["Does AI replace the salesperson?", "No. WIN DEALS is designed to help salespeople make better decisions faster. It surfaces evidence, explains potential risks, and recommends actions while keeping the salesperson in control."],
 ];
 
 export function FAQ() {
