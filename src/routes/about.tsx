@@ -13,10 +13,10 @@ export const Route = createFileRoute("/about")({
 });
 
 const beliefs = [
-  { icon: Lightbulb, t: "Intelligence should be actionable", d: "Information is useful when it helps someone make a better decision." },
-  { icon: Radar, t: "AI should work from evidence", d: "AI should interpret real business signals rather than produce vague recommendations." },
-  { icon: UserCheck, t: "Salespeople should stay in control", d: "Technology should help salespeople make better decisions, not remove them from the process." },
-  { icon: ShieldCheck, t: "Your CRM should remain yours", d: "WIN DEALS is designed to add intelligence to your existing sales systems, not force teams to replace them." },
+  { icon: Lightbulb, t: "Intelligence should be actionable", d: "Insights should lead to a clear decision or next step." },
+  { icon: Radar, t: "AI should work from evidence", d: "Recommendations should be grounded in observable deal signals and context." },
+  { icon: UserCheck, t: "Salespeople should stay in control", d: "WIN DEALS recommends. The salesperson decides." },
+  { icon: ShieldCheck, t: "Your CRM should remain yours", d: "WIN DEALS adds intelligence without requiring teams to replace their CRM." },
 ];
 const flow = [
   { icon: Database, t: "CRM Data", d: "Deals, contacts, emails, meetings, stages" },
@@ -25,7 +25,7 @@ const flow = [
   { icon: Gauge, t: "Deal Priority", d: "Which opportunities need attention first" },
   { icon: Target, t: "Next Best Action", d: "One clear recommended step", focus: true },
   { icon: Briefcase, t: "Sales Action", d: "The salesperson decides and acts" },
-  { icon: TrendingUp, t: "Outcome", d: "Results inform future recommendations" },
+  { icon: TrendingUp, t: "Outcome", d: "Long-term: outcomes inform future recommendations" },
 ];
 const principles = [
   { icon: ListChecks, t: "Prioritize, don't overwhelm", d: "Salespeople should quickly know which opportunities deserve attention." },
@@ -52,16 +52,33 @@ function About() {
     <PageHero eyebrow="About WIN DEALS" title={<>Sales teams don't need more data. <span className="font-editorial font-normal italic tracking-normal text-lime">They need to know what matters.</span></>} body="WIN DEALS exists to help sales teams turn the information already sitting inside their CRM into clear deal intelligence and actionable next steps." />
 
     <section className={section}><div className={cn(wrap, "grid gap-10 lg:grid-cols-[1fr_1.2fr]")}>
-      <Heading eyebrow="Our mission" title="Our mission" />
+      <Heading eyebrow="Our mission" title="Turn CRM data into better sales decisions." />
       <Reveal className="space-y-5 text-lg leading-relaxed text-secondary-foreground">
-        <p className="font-semibold text-foreground">WIN DEALS is building a smarter way for sales teams to understand their pipeline.</p>
-        <p>Modern sales teams already have enormous amounts of information across their CRM, emails, meetings, contacts, activities, and deal stages. The challenge isn't collecting more data. It's understanding what that data means.</p>
-        <p>WIN DEALS turns those signals into deal intelligence — helping salespeople identify risk, recognize buying signals, prioritize the right opportunities, and decide what to do next.</p>
+        <p>Sales teams already have enormous amounts of information about their opportunities.</p>
+        <p>The challenge is understanding what that information means.</p>
+        <p>WIN DEALS is being built to identify the signals, risks, and patterns that deserve attention and turn them into practical actions.</p>
+      </Reveal>
+    </div></section>
+
+    <section className={cn(section, "border-y border-border bg-card")}><div className={cn(wrap, "grid gap-10 lg:grid-cols-[1fr_1.2fr]")}>
+      <Heading eyebrow="Built by" title="Muhammad Awais" body="Founder, WIN DEALS" />
+      <Reveal className="text-lg leading-relaxed text-secondary-foreground">
+        <p>WIN DEALS is being built by Muhammad Awais with a focus on turning complex sales data and activity into practical intelligence that helps teams make better decisions.</p>
+        <p className="mt-4 text-base">Contact: <a className="font-medium text-primary hover:underline" href="mailto:awais@windeals.me">awais@windeals.me</a></p>
+      </Reveal>
+    </div></section>
+
+    <section className={section}><div className={cn(wrap, "max-w-3xl")}>
+      <Heading eyebrow="The problem" title="The CRM tells you what happened. It doesn't always tell you what it means." />
+      <Reveal className="mt-6 text-lg leading-relaxed text-secondary-foreground">
+        <p>Salespeople still spend time manually reviewing:</p>
+        <ul className="mt-4 flex flex-wrap gap-2">{["Activities", "Emails", "Meetings", "Deal stages", "Stakeholder engagement", "Follow-ups", "Close dates", "Notes"].map((t) => <li key={t} className="rounded-md border border-border bg-card px-2.5 py-1 text-sm text-foreground">{t}</li>)}</ul>
+        <p className="mt-5">WIN DEALS is designed to reduce that cognitive load.</p>
       </Reveal>
     </div></section>
 
     <section className={cn(section, "premium-hero")}><div className={wrap}>
-      <Heading dark title="The CRM tells you what happened. We want to help explain what it means." />
+      <Heading dark title="From what happened to what to do next." />
       <div className="mt-12 grid items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
         {[{ k: "Traditional CRM", q: "What happened?", items: ["Deals", "Contacts", "Activities", "Emails", "Stages", "Notes", "Reports"] }, null, { k: "WIN DEALS", q: "What should I do?", items: ["Signals", "Risk", "Momentum", "Stakeholder engagement", "Diagnosis", "Priority", "Next Best Action"], focus: true }].map((c, i) => c === null
           ? <div key="arrow" className="flex justify-center text-dark-muted"><ArrowRight className="hidden size-6 lg:block" aria-hidden /><ArrowDown className="size-6 lg:hidden" aria-hidden /></div>
