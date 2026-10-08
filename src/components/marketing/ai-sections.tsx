@@ -14,7 +14,7 @@ import { Reveal } from "./reveal";
 
 /** Status labels must match what the product actually does today. */
 type Status = "In development" | "Planned" | "Architecture-ready";
-function StatusPill({ status, strong }: { status: Status; strong?: boolean }) {
+function StatusPill({ status, strong }: { status: Status; strong?: boolean | undefined }) {
   return <span className={cn("rounded-full border px-2.5 py-0.5 text-[11px] font-semibold", strong ? "border-primary/30 bg-brand-soft text-primary" : "border-border bg-muted text-secondary-foreground")}>{status}</span>;
 }
 
