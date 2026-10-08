@@ -221,7 +221,8 @@ export function EarlyAccess() {
 const faqs: [string, string][] = [
   ["What is WIN DEALS?", "WIN DEALS is an AI Deal Intelligence platform that analyzes CRM pipeline data to identify deal risk, surface buying signals, and recommend the next best action."],
   ["Is WIN DEALS a CRM?", "No. WIN DEALS is an intelligence layer that works on top of your existing CRM. Your CRM remains your system of record."],
-  ["Which CRM do you support?", "WIN DEALS is initially being built around HubSpot. Additional CRM integrations may be introduced as the product develops."],
+  ["Which CRM do you support?", "WIN DEALS is initially being built around HubSpot. Salesforce, Pipedrive, Close, Zoho CRM and Microsoft Dynamics are planned through the same CRM adapter architecture."],
+  ["Which AI models does WIN DEALS use?", "Claude is the primary AI provider for the reasoning layer. The architecture is provider-agnostic, so OpenAI and OpenAI-compatible models can be connected through the same interface. The WIN Score itself is calculated by software, not by AI."],
   ["Does WIN DEALS automatically send emails?", "Not by default. WIN DEALS can generate suggested email drafts while the salesperson remains in control of reviewing and sending them."],
   ["How is the WIN Score calculated?", "The WIN Score combines structured pipeline signals such as engagement, activity, momentum, stakeholder coverage, timing, and deal progression. It is designed to help prioritize attention rather than guarantee an outcome."],
   ["Does AI replace the salesperson?", "No. WIN DEALS is designed to help salespeople make better decisions faster. It surfaces evidence, explains potential risks, and recommends actions while keeping the salesperson in control."],
