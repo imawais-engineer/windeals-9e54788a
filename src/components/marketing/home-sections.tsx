@@ -129,7 +129,7 @@ export function Diagnosis() {
 export function NextActionSection() {
   return <section className={section}><div className={cn(wrap, "grid items-center gap-12 lg:grid-cols-[1fr_1.1fr]")}>
     <div>
-      <Heading title="Know what to do next." body="WIN DEALS turns deal intelligence into a practical action." />
+      <Heading title="Know what to do next." body="WIN DEALS turns deal intelligence into a practical action. It recommends — the salesperson decides. Email drafts are suggestions you review and send yourself; nothing is sent automatically." />
       <Reveal><div className="mt-8 flex flex-col items-start gap-1.5 text-xs font-bold tracking-wider">{["SIGNAL", "DIAGNOSIS", "ACTION"].map((t, i) => <div key={t} className="flex flex-col items-start gap-1.5"><span className={cn("rounded-md px-3 py-1.5", i === 2 ? "bg-primary text-primary-foreground" : "bg-muted text-secondary-foreground")}>{t}</span>{i < 2 && <ArrowDown className="ml-6 size-4 text-muted-foreground" />}</div>)}</div></Reveal>
     </div>
     <Reveal><NextBestAction size="lg" text={showcaseNextAction} /></Reveal>
